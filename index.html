@@ -11,17 +11,71 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Emoji Memory Card Game</title>
 </head>
-<!--When loaded open modal-->
-<body onload="openModal()">
-    <div id="myModal" class="modal">
-        <h1 class="modal-title">Test Your Memory</h1>
-        <form class="modal-content">
-            <span id="close"></span>
-            <p>Enter Name Below</p>
-        </form>
-    </div>
-    
 
-    <script src="script.js"></script>
+<body>
+
+<dialog id="usernameDialog">
+    <form class="space-evenly" method="dialog">
+      <p>
+        <label for="username">Username:</label>
+        <input id="username" name="username" class="modal-input" type="text"/>
+      </p>
+      <div>
+        <button class="btn" id="start" type="reset">Start</button>
+        </div>
+    </form>
+  </dialog>
+  <section class="card-section flex" aria-label="game card grid">
+    <div class="card" data-image="crying">
+        <img src="assets/images/Crying.png" alt="Crying face" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="crying">
+        <img src="assets/images/Crying.png" alt="Crying face" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="embarassed">
+        <img src="assets/images/Embarassed.png" alt="Embarassed face" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="embarassed">
+        <img src="assets/images/Embarassed.png" alt="Embarassed face" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="fist">
+        <img src="assets/images/Fist.png" alt="Fist" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="fist">
+        <img src="assets/images/Fist.png" alt="Fist" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="heart">
+        <img src="assets/images/Heart.png" alt="Heart" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="heart">
+        <img src="assets/images/Heart.png" alt="Heart" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="love">
+        <img src="assets/images/Love.png" alt="Love" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="love">
+        <img src="assets/images/Love.png" alt="Love" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="smile">
+        <img src="assets/images/Smile.png" alt="Smile" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+    <div class="card" data-image="smile">
+        <img src="assets/images/Smile.png" alt="Smile" class="front">
+        <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+    </div>
+</section>
+ 
+<script src="assets/JS/script.js"></script>
 </body>
 </html>
