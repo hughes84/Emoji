@@ -33,7 +33,7 @@ function checkMatch(card,cardBack,cardFront){
           firstCard.children[1].style.display = "flex"; // Hide the back when showing the front
           firstCard = null
           firstCardData = null
-        }, 2000);
+        }, 1000);
       }
     }else{//if it is the first card to turn over
       firstCard = card

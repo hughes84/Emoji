@@ -41,6 +41,32 @@ body {
     height: 100%;
 }
 
+h1 {
+    font-size: 50px;
+    font-family: "roboto";
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-style: groove;
+    border-width: 10px;
+    margin: 50px 250px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+
+h1:hover {
+    text-shadow: 0 1px 0 #000000, 0 2px 0 #000000,
+        0 3px 0 #000000, 0 4px 0 #000000,
+        0 5px 0 #000000, 0 6px 0 #000000,
+        0 7px 0 #000000, 0 8px 0 #000000,
+        0 9px 0 #000000, 0 10px 0 #000000,
+        0 11px 0 #000000, 0 12px 0 #000000,
+        0 20px 30px #00000080;
+
+}
+
 .card {
     width: 150px;
     height: 150px;
@@ -63,8 +89,7 @@ body {
 .card-section {
     width: 60%;
     height: 90%;
-    border: 2px solid black;
-    margin: auto auto;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -83,6 +108,5 @@ body {
 .back {
     border: 5px black solid;
     height: 150px;
-    
     
 }
