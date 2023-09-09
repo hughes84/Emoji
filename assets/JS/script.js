@@ -46,3 +46,50 @@ function checkMatch(card,cardBack,cardFront){
 //   dialog.style.display="none"
 //   console.log(localStorage.getItem("username"))
 // });
+
+
+        let timerInterval;
+        let startTime;
+        let running = false;
+
+        const timerElement = document.getElementById('timer');
+        const startButton2 = document.getElementById('startButton2');
+        const stopButton = document.getElementById('stopButton');
+        const resetButton = document.getElementById('resetButton');
+
+        startButton2.addEventListener('click', startTimer);
+        stopButton.addEventListener('click', stopTimer);
+        resetButton.addEventListener('click', resetTimer);
+
+        function startTimer() {
+            if (!running) {
+                startTime = Date.now() - (startTime || 0);
+                timerInterval = setInterval(updateTimer, 1000);
+                running = true;
+            }
+        }
+
+        function stopTimer() {
+            if (running) {
+                clearInterval(timerInterval);
+                running = false;
+            }
+        }
+
+        function resetTimer() {
+            stopTimer();
+            startTime = 0;
+            updateTimerDisplay(0);
+        }
+
+        function updateTimer() {
+            const elapsedTime = Date.now() - startTime;
+            updateTimerDisplay(elapsedTime);
+        }
+
+        function updateTimerDisplay(elapsedTime) {
+            const seconds = Math.floor(elapsedTime / 1000);
+            timerElement.textContent = seconds + '  seconds';
+        }
+    
+        
