@@ -1,7 +1,7 @@
 const startButton = document.getElementById("start");
 startButton.addEventListener("click", closeDialog);
 const dialog = document.getElementById("usernameDialog");
-const username = document.getElementById("username");
+const usernameElement = document.getElementById("username");
 const cards = document.querySelectorAll(".card"); // Changed 'card' to 'cards' for clarity
 const scoreDiv = document.getElementById("score");
 const userNameForm = document.getElementById("form");
@@ -22,11 +22,15 @@ resetButton.addEventListener('click', resetGame);
 
 let firstCard = null;
 let score = 0;
-
+let timerInterval;
+let elapsedTime
+let twoFlipped = false
+let username 
 
 function closeDialog() {
-  if (username.value != "" && username.value.length < 10) {
+  if (usernameElement.value != "" && usernameElement.value.length < 10) {
     dialog.style.display = "none";
+    username = usernameElement.value
 
   } else if (userNameForm.firstElementChild.tagName != "H5") {
     const h5Element = document.createElement("h5");
@@ -55,7 +59,7 @@ function resetGame() {
   location.reload()
 }
 
-let twoFlipped = false
+
 
 function cardFlip() {
   const cardFront = this.querySelector(".front");
@@ -99,9 +103,8 @@ function checkMatch(card, cardBack, cardFront) {
 }
 
 
-let timerInterval;
-let startTime;
-let running = false;
+;
+
 
 
 function startTimer() {
@@ -133,7 +136,7 @@ function shuffle() {
 
 function addScore() {
   score += 10
-  scoreDiv.innerHTML = `Score: ${score}`
+  scoreDiv.innerHTML = `${username}'s Score: ${score}`
   if (score === 60) {
     clearInterval(timerInterval)
     gameOver()
@@ -145,9 +148,17 @@ function gameOver() {
     card.removeEventListener("click", cardFlip)
   });
   dialog.style.display = "flex"
+  
   userNameForm.style.display = "none"
   gameOverScreen.classList.remove("hide")
-  gameOverScreen.classList.add("show")
+  gameOverScreen.classList.add("flex-column")
+  const gameOverPElement = gameOverScreen.querySelector("p")
+  if(score <60 || elapsedTime === 0){
+    gameOverPElement.textContent = "Better Luck Next Time"
+  }else{
+    gameOverPElement.textContent = `Well done ${username} Your score was ${score}` 
+  }
+  
   setTimeout(() => {
     resetGame()
   }, 4000)
