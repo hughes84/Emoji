@@ -49,9 +49,10 @@ body {
 
 }
 
-.game-area {
+#game-area {
     width: 100%;
     position: relative;
+    
 }
 
 .flex-row {
@@ -71,6 +72,11 @@ body {
     border-radius: 5px;
     padding: 5px;
     width: 100px;
+    
+}
+
+.btn:hover {
+    background-color: rgb(101, 244, 101);
 }
 
 #usernameDialog {
@@ -205,13 +211,13 @@ footer {
     #usernameDialog {
         font-weight: 400;
         font-size: 1.2em;
-        height: 100%;
+        
 
     }
 
     h1 {
         font-size: x-large;
-        margin: 0;
+        
     }
 
     .foot-text {
@@ -227,6 +233,16 @@ footer {
         grid-template-columns: repeat(2,1fr);
 
     }   
+
+    #score_timer{
+        font-size: 1.2em;
+        
+        
+    }
+
+    input{
+        width: 70%;
+    }
 
 
 }
