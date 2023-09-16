@@ -12,30 +12,33 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Emoji Memory Card Game</title>
 </head>
-
 <body>
-<div id="usernameDialog">
-    <div class="flex-column container">
-    <form id="form" class="space-evenly" method="dialog">
-        <p class="flex-column">
-        <label for="username">Enter Username:</label>
-        <input id="username" name="username" class="modal-input" type="text"/>
-      </p>
-      <div>
-        <button class="btn" id="start" type="reset">Start Game</button>
-        </div>
-    </form>
-    <div class="hide" id="game-over-screen">
-    <h2>Game Over</h2>
-    </div>
-  </div>
-</div>
-  <header>
+    <header>
     <div>
-        <h1 class="title">Emoji Memory Card Game</h1>
+        <h1>Emoji Memory Card Game</h1>
     </div>
   </header>
-  <main id="game-area" class="flex-row">
+  <main id="game-area" class="flex-column">
+    <div id="usernameDialog">
+        <div class="flex-column container">
+        <form id="form" class="space-evenly" method="dialog">
+            <p class="flex-column">
+            <label for="username">Username:</label>
+            <input id="username" name="username" class="modal-input" type="text"/>
+          </p>
+          <div>
+            <button class="btn" id="start" type="reset">Start Game</button>
+            </div>
+        </form>
+        <div class="hide" id="game-over-screen">
+        <h2>Game Over</h2>
+        </div>
+      </div>
+    </div>
+    <div id="score_timer" class="flex-row">
+        <div id="score">Score:0</div>
+        <div id="timer">Time:45</div>
+    </div>
     <section class="card-section" aria-label="game card grid">
         <div class="card" data-image="crying">
             <img src="assets/images/Crying.png" alt="Crying face" class="front">
@@ -86,20 +89,10 @@
             <img src="assets/images/Placeholder.png" alt="back of card" class="back">
         </div>
     </section>
-    <section class="flex-column container">
-        <div class="hide" id="score_timer">
-            <div id="score">Score:0</div>
-            <div id="timer">Time:45</div>
+        <div class="flex-row">
+            <button id="playBtn" class="btn">Play</button>
+            <button id="resetButton" class="btn">Reset</button>
         </div>
-        <div class="flex-column" id="controls">
-        <h2>Press Play to Start Game</h2>
-        
-        <div>
-            <button id="playBtn">Play</button>
-            <button id="resetButton">Reset</button>
-        </div>
-    </div>
-    </section>
 </main>
 <footer>
     <div class="social-media">
