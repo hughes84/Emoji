@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="memory card game, emoji card game, memory, match">
     <meta name="description" content="Try to match emoji images by memory">
-    <!--Font awesome link-->
+    <!--Font awesome and Google fonts links-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.google.com/specimen/Roboto?query=Roboto">
@@ -20,6 +20,7 @@
             <h1>Emoji Memory Card Game</h1>
         </div>
     </header>
+    <!--Game area and modal section-->
     <main id="game-area" class="flex-column">
         <div id="usernameDialog">
             <div class="flex-column container">
@@ -38,10 +39,12 @@
                 </div>
             </div>
         </div>
+        <!--Score and timer-->
         <div id="score_timer" class="flex-row">
             <div id="score">Score:0</div>
             <div id="timer">Time:45</div>
         </div>
+        <!--Card section with card images front and back-->
         <section class="card-section" aria-label="game card grid">
             <div class="card" data-image="crying">
                 <img src="assets/images/Crying.png" alt="Crying face" class="front">
@@ -92,12 +95,14 @@
                 <img src="assets/images/Placeholder.png" alt="back of card" class="back">
             </div>
         </section>
+        <!--Game buttons-->
         <div class="flex-row">
             <button id="playBtn" class="btn">Play</button>
             <button id="resetButton" class="btn">Reset</button>
         </div>
     </main>
     <footer>
+        <!--Social media links-->
         <div class="social-media">
 
             <a href="https://github.com/hughes84/Emoji.git" target="_blank" rel="noopener"

@@ -1,27 +1,41 @@
+/**for start game button on username dialog*/
 const startButton = document.getElementById("start");
+/**for play game button on game page*/
 const playButton = document.getElementById("playBtn")
+/**for reset button to return to username dialog*/
+const resetButton = document.getElementById("resetButton");
+/**for username text content*/
 const dialog = document.getElementById("usernameDialog");
 const usernameElement = document.getElementById("username");
-const cards = document.querySelectorAll(".card"); // Changed 'card' to 'cards' for clarity
-const scoreDiv = document.getElementById("score");
 const userNameForm = document.getElementById("form");
+/**for playing cards*/
+const cards = document.querySelectorAll(".card");
+/**for score and timer*/
+const scoreDiv = document.getElementById("score");
 const scoreTimerDiv = document.getElementById("score_timer");
-const gameOverScreen = document.getElementById("game-over-screen");
-const resetButton = document.getElementById("resetButton");
 const timer = document.getElementById("timer")
-const controls = document.getElementById("controls")
+/**for game over screen*/
+const gameOverScreen = document.getElementById("game-over-screen");
 
+
+
+/**manage card flip */
 let firstCard = null;
+let twoFlipped = false
+/**count score */
 let score = 0;
+/**time game*/
 let timerInterval;
 let elapsedTime
-let twoFlipped = false
+/**username*/
 let username
 
+/**game buttons*/
 playButton.addEventListener("click", startGame)
 startButton.addEventListener("click", closeDialog);
 resetButton.addEventListener('click', resetGame);
 
+/**username dialog function*/
 function closeDialog() {
   if (usernameElement.value != "" && usernameElement.value.length < 10) {
     dialog.style.display = "none";
@@ -42,6 +56,7 @@ function closeDialog() {
 
 }
 
+/**game works functions*/
 function startGame() {
   shuffle()
   startTimer()
@@ -50,51 +65,56 @@ function startGame() {
   });
 }
 
+/**bring user back to username dialog*/
 function resetGame() {
   location.reload()
 }
 
+/**game play card flip*/
 function cardFlip() {
   const cardFront = this.querySelector(".front");
   const cardBack = this.querySelector(".back");
   if (!twoFlipped) {
     if (cardFront.style.display === "none" || cardFront.style.display === "") {
       cardFront.style.display = "flex";
-      cardBack.style.display = "none"; // Show the back when
+      cardBack.style.display = "none";
     }
     checkMatch(this, cardBack, cardFront)
   }
 
 
 }
+
+/**game play card matching */
 function checkMatch(card, cardBack, cardFront) {
-  if (firstCard != null) {//if its not the first card to turn over
+  if (firstCard != null) {
     twoFlipped = true
     let firstCardData = firstCard.dataset.image;
-    if (firstCardData === card.dataset.image) {//if cards match
+    if (firstCardData === card.dataset.image) {
       twoFlipped = false
       addScore()
       card.removeEventListener("click", cardFlip)
       firstCard = null
       firstCardData = null
-    } else {//if cards dont match
+    } else {
       setTimeout(() => {
         cardFront.style.display = "none";
-        cardBack.style.display = "flex"; // Hide the back when showing the front
+        cardBack.style.display = "flex"; 
         firstCard.addEventListener("click", cardFlip);
         firstCard.children[0].style.display = "none";
-        firstCard.children[1].style.display = "flex"; // Hide the back when showing the front
+        firstCard.children[1].style.display = "flex"; 
         firstCard = null
         firstCardData = null
         twoFlipped = false
       }, 1000);
     }
-  } else {//if it is the first card to turn over
+  } else {
     firstCard = card
     firstCard.removeEventListener("click", cardFlip)
   }
 }
 
+/**game play timer*/
 function startTimer() {
   elapsedTime = 45
   timerInterval = setInterval(() => {
@@ -109,12 +129,7 @@ function startTimer() {
 
 }
 
-function resetTimer() {
-  stopTimer();
-  startTime = 0;
-  updateTimerDisplay(0);
-}
-
+/**game play shuffle cards*/
 function shuffle() {
   for (let card of cards) {
     let ramdomPos = Math.floor(Math.random() * 12);
@@ -122,6 +137,7 @@ function shuffle() {
   }
 }
 
+/**game play score counter*/
 function addScore() {
   score += 10
   scoreDiv.innerHTML = `${username}'s Score: ${score}`
@@ -131,6 +147,7 @@ function addScore() {
   }
 }
 
+/**game over screen and message*/
 function gameOver() {
   cards.forEach(function (card) {
     card.removeEventListener("click", cardFlip)
