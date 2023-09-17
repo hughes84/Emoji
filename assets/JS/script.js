@@ -1,5 +1,5 @@
 const startButton = document.getElementById("start");
-startButton.addEventListener("click", closeDialog);
+const playButton = document.getElementById("playBtn")
 const dialog = document.getElementById("usernameDialog");
 const usernameElement = document.getElementById("username");
 const cards = document.querySelectorAll(".card"); // Changed 'card' to 'cards' for clarity
@@ -8,24 +8,19 @@ const userNameForm = document.getElementById("form");
 const scoreTimerDiv = document.getElementById("score_timer");
 const gameOverScreen = document.getElementById("game-over-screen");
 const resetButton = document.getElementById("resetButton");
-
-
-
-const playButton = document.getElementById("playBtn")
-playButton.addEventListener("click", startGame)
-
-
 const timer = document.getElementById("timer")
 const controls = document.getElementById("controls")
-
-resetButton.addEventListener('click', resetGame);
 
 let firstCard = null;
 let score = 0;
 let timerInterval;
 let elapsedTime
 let twoFlipped = false
-let username 
+let username
+
+playButton.addEventListener("click", startGame)
+startButton.addEventListener("click", closeDialog);
+resetButton.addEventListener('click', resetGame);
 
 function closeDialog() {
   if (usernameElement.value != "" && usernameElement.value.length < 10) {
@@ -58,8 +53,6 @@ function startGame() {
 function resetGame() {
   location.reload()
 }
-
-
 
 function cardFlip() {
   const cardFront = this.querySelector(".front");
@@ -102,11 +95,6 @@ function checkMatch(card, cardBack, cardFront) {
   }
 }
 
-
-;
-
-
-
 function startTimer() {
   elapsedTime = 45
   timerInterval = setInterval(() => {
@@ -148,17 +136,17 @@ function gameOver() {
     card.removeEventListener("click", cardFlip)
   });
   dialog.style.display = "flex"
-  
+
   userNameForm.style.display = "none"
   gameOverScreen.classList.remove("hide")
   gameOverScreen.classList.add("flex-column")
   const gameOverPElement = gameOverScreen.querySelector("p")
-  if(score <60 || elapsedTime === 0){
+  if (score < 60 || elapsedTime === 0) {
     gameOverPElement.textContent = "Better Luck Next Time"
-  }else{
-    gameOverPElement.textContent = `Well done ${username} Your score was ${score}` 
+  } else {
+    gameOverPElement.textContent = `Well done ${username} Your score was ${score}`
   }
-  
+
   setTimeout(() => {
     resetGame()
   }, 4000)

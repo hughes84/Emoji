@@ -1,113 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="memory card game, emoji card game, memory, match">
     <meta name="description" content="Try to match emoji images by memory">
-        <!--Font awesome link-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+    <!--Font awesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href= "https://fonts.google.com/specimen/Roboto?query=Roboto">
+    <link href="https://fonts.google.com/specimen/Roboto?query=Roboto">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Emoji Memory Card Game</title>
 </head>
+
 <body>
     <header>
-    <div>
-        <h1>Emoji Memory Card Game</h1>
-    </div>
-  </header>
-  <main id="game-area" class="flex-column">
-    <div id="usernameDialog">
-        <div class="flex-column container">
-        <form id="form" class="space-evenly" method="dialog">
-            <p class="flex-column">
-            <label for="username">Username:</label>
-            <input id="username" name="username" class="modal-input" type="text"/>
-          </p>
-          <div>
-            <button class="btn" id="start" type="reset">Start Game</button>
+        <div>
+            <h1>Emoji Memory Card Game</h1>
+        </div>
+    </header>
+    <main id="game-area" class="flex-column">
+        <div id="usernameDialog">
+            <div class="flex-column container">
+                <form id="form" class="space-evenly" method="dialog">
+                    <p class="flex-column">
+                        <label for="username">Username:</label>
+                        <input id="username" name="username" class="modal-input" type="text" />
+                    </p>
+                    <div>
+                        <button class="btn" id="start" type="reset">Start Game</button>
+                    </div>
+                </form>
+                <div class="hide" id="game-over-screen">
+                    <h2>Game Over</h2>
+                    <p></p>
+                </div>
             </div>
-        </form>
-        <div class="hide" id="game-over-screen">
-        <h2>Game Over</h2>
-        <p></p>
         </div>
-      </div>
-    </div>
-    <div id="score_timer" class="flex-row">
-        <div id="score">Score:0</div>
-        <div id="timer">Time:45</div>
-    </div>
-    <section class="card-section" aria-label="game card grid">
-        <div class="card" data-image="crying">
-            <img src="assets/images/Crying.png" alt="Crying face" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+        <div id="score_timer" class="flex-row">
+            <div id="score">Score:0</div>
+            <div id="timer">Time:45</div>
         </div>
-        <div class="card" data-image="crying">
-            <img src="assets/images/Crying.png" alt="Crying face" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="embarassed">
-            <img src="assets/images/Embarassed.png" alt="Embarassed face" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="embarassed">
-            <img src="assets/images/Embarassed.png" alt="Embarassed face" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="fist">
-            <img src="assets/images/Fist.png" alt="Fist" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="fist">
-            <img src="assets/images/Fist.png" alt="Fist" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="heart">
-            <img src="assets/images/Heart.png" alt="Heart" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="heart">
-            <img src="assets/images/Heart.png" alt="Heart" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="love">
-            <img src="assets/images/Love.png" alt="Love" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="love">
-            <img src="assets/images/Love.png" alt="Love" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="smile">
-            <img src="assets/images/Smile.png" alt="Smile" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-        <div class="card" data-image="smile">
-            <img src="assets/images/Smile.png" alt="Smile" class="front">
-            <img src="assets/images/Placeholder.png" alt="back of card" class="back">
-        </div>
-    </section>
+        <section class="card-section" aria-label="game card grid">
+            <div class="card" data-image="crying">
+                <img src="assets/images/Crying.png" alt="Crying face" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="crying">
+                <img src="assets/images/Crying.png" alt="Crying face" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="embarassed">
+                <img src="assets/images/Embarassed.png" alt="Embarassed face" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="embarassed">
+                <img src="assets/images/Embarassed.png" alt="Embarassed face" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="fist">
+                <img src="assets/images/Fist.png" alt="Fist" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="fist">
+                <img src="assets/images/Fist.png" alt="Fist" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="heart">
+                <img src="assets/images/Heart.png" alt="Heart" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="heart">
+                <img src="assets/images/Heart.png" alt="Heart" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="love">
+                <img src="assets/images/Love.png" alt="Love" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="love">
+                <img src="assets/images/Love.png" alt="Love" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="smile">
+                <img src="assets/images/Smile.png" alt="Smile" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+            <div class="card" data-image="smile">
+                <img src="assets/images/Smile.png" alt="Smile" class="front">
+                <img src="assets/images/Placeholder.png" alt="back of card" class="back">
+            </div>
+        </section>
         <div class="flex-row">
             <button id="playBtn" class="btn">Play</button>
             <button id="resetButton" class="btn">Reset</button>
         </div>
-</main>
-<footer>
-    <div class="social-media">
-        
-            <a href="https://github.com/hughes84/Emoji.git" target="_blank" rel="noopener" aria-label="Visit GitHub page (opens in a new tab)"><i class="fab fa-brands fa-github fa-social-icon"></i></a>
-        
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
-        
-            <a href="https://www.copyright.gov/what-is-copyright/#:~:text" target="_blank" rel="noopener" aria-label="Copyright details (opens in a new tab)"><i class="fa fa-sharp fa-regular fa-copyright"></i></a>
-        
-    </div>
-    <p class="foot-text">Please find links to relevant repository, social media and copyright!</p>
-</footer>
+    </main>
+    <footer>
+        <div class="social-media">
 
- <script src="assets/JS/script.js"></script>
+            <a href="https://github.com/hughes84/Emoji.git" target="_blank" rel="noopener"
+                aria-label="Visit GitHub page (opens in a new tab)"><i
+                    class="fab fa-brands fa-github fa-social-icon"></i></a>
+
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+
+            <a href="https://www.copyright.gov/what-is-copyright/#:~:text" target="_blank" rel="noopener"
+                aria-label="Copyright details (opens in a new tab)"><i
+                    class="fa fa-sharp fa-regular fa-copyright"></i></a>
+
+        </div>
+        <p class="foot-text">Please find links to relevant repository, social media and copyright!</p>
+    </footer>
+
+    <script src="assets/JS/script.js"></script>
 </body>
+
 </html>
