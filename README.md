@@ -8,7 +8,7 @@ Try match the Emoji's before your time runs out! Can you do it in under 45 secon
 
 Link to [live site](https://hughes84.github.io/Emoji/)
 
-## Table of Contents
+# Table of Contents
 
 
 # How to Play
@@ -54,7 +54,7 @@ This project does not have any external dependencies. It can be played in any mo
 
 I designed my memory card game with the aim to deliver a familiar, simple experience for the target user. The game itself is a classic popular game which I predict all users will know the rules on how to play. The game is simple and easy to play even if the user has not come across such a game before. The countdown timer gives the game an extra thrill as the clock ticks down. I'm sure this will excite the user. I used emoji images which are used by nearly everyone on a daily basis. I believe this will give the user some familiarity.
 
-**Wireframes**
+## Wireframes
 
 I invisaged my game to be easy to use and allow the user to get playing quickly. 
 
@@ -66,7 +66,7 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 # Features
 
-**Existing Features**
+## Existing Features
 
 - Header with game name.
 
@@ -98,20 +98,20 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 - GitHub, game rules and copyright links.
 
-![Links](assets/images/Links.png)
+![Links](assets/images/Links%20(2).png)
 
 [Back to Table of Contents](#table-of-contents)
 
 # User Experience
 
-**Site Goals**
+## Site Goals
 
 - The goal of the site is to provide the user with a simple yet fun memory game with the added entertainment of the every day used emojis.
 - The game is quick at 45 seconds long which gives the user a thrill in trying to beat the clock.
 
 # User Stories
 
-**As a first time user I want to**
+## As a first time user I want to
 
 - be able to enter my own name into the field that then displays on the game page.
 - be able to navigate my way around the site with ease.
