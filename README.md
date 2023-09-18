@@ -283,12 +283,12 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 # Deployment
 
-This site was created using the streamlined code editor Visual Studio Code and pushed to github to the remote repository ‘emoji’.
+This site was created using the streamlined code editor Visual Studio Code and pushed to github to the repository ‘emoji’.
 
-The following git commands were used throughout development to push code to the remote repo:
+The following git commands were used during development to push code to the my repository:
 
-- git add <file> - This command was used to add the file(s) to the staging area before they are committed.
+- git add - To add files to the staging area before committing.
 
-- git commit -m “commit message” - This command was used to commit changes to the local repository queue ready for the final step.
+- git commit -m - To commit changes to the local repository.
 
-- git push - This command was used to push all committed code to the remote repository on github.
+- git push - To push all committed code to my repository on github.

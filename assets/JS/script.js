@@ -16,7 +16,7 @@ const timer = document.getElementById("timer");
 /*for game over screen*/
 const gameOverScreen = document.getElementById("game-over-screen");
 /*for error*/
-const h5Element = document.createElement("h5");
+const h5Element = document.createElement("h5"); 
 
 
 /*manage card flip*/
