@@ -21,7 +21,7 @@
         </div>
     </header>
     <!--Game area and modal section-->
-    <main id="game-area" class="flex-column">
+    <main id="game-area" class="flex-row">
         <div id="usernameDialog">
             <div class="flex-column container">
                 <form id="form" class="space-evenly" method="dialog">
@@ -30,7 +30,7 @@
                         <input id="username" name="username" class="modal-input" type="text" />
                     </p>
                     <div>
-                        <button class="btn" id="start" type="reset">Start Game</button>
+                        <button class="btn hand-cursor" id="start">Start Game</button>
                     </div>
                 </form>
                 <div class="hide" id="game-over-screen">
@@ -38,11 +38,6 @@
                     <p></p>
                 </div>
             </div>
-        </div>
-        <!--Score and timer-->
-        <div id="score_timer" class="flex-row">
-            <div id="score">Score:0</div>
-            <div id="timer">Time:45</div>
         </div>
         <!--Card section with card images front and back-->
         <section class="card-section" aria-label="game card grid">
@@ -95,11 +90,27 @@
                 <img src="assets/images/Placeholder.png" alt="back of card" class="back">
             </div>
         </section>
+        <div class="flex-column box">
+        <!--Score and timer-->
+        <div id="score_timer" class="flex-column">
+            <div id="score">Score:0</div>
+            <div id="timer">Time:45</div>
+        </div>
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <ol>
+                <li>Press play to start game</li>
+                <li>Click on a card to flip it over</li>
+                <li>Click a second, if they match you get 10 points</li>
+                <li>Click reset to start over</li>
+            </ol>
+        </div>
         <!--Game buttons-->
         <div class="flex-row">
-            <button id="playBtn" class="btn">Play</button>
-            <button id="resetButton" class="btn">Reset</button>
+            <button id="playBtn" class="btn hand-cursor">Play</button>
+            <button id="resetButton" class="btn hand-cursor">Reset</button>
         </div>
+    </div>
     </main>
     <footer>
         <!--Social media links-->
