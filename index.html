@@ -91,27 +91,29 @@
             </div>
         </section>
         <div class="flex-column box">
-        <!--Score and timer-->
-        <div id="score_timer" class="flex-column">
-            <div id="score">Score:0</div>
-            <div id="timer">Time:45</div>
+            <!--Score and timer-->
+            <div id="score_timer" class="flex-column">
+                <div id="score">Score:0</div>
+                <div id="timer">Time:45</div>
+            </div>
+            <div class="instructions">
+                <u>
+                    <h3>Instructions</h3>
+                </u>
+                <ol>
+                    <li>Press play to start game</li>
+                    <li>Click on a card to flip it over</li>
+                    <li>Click a second card, if they match you get 10 points</li>
+                    <li>Try match all cards in under 45 seconds</li>
+                    <li>Click reset to start over</li>
+                </ol>
+            </div>
+            <!--Game buttons-->
+            <div class="flex-row">
+                <button id="playBtn" class="btn hand-cursor">Play</button>
+                <button id="resetButton" class="btn hand-cursor">Reset</button>
+            </div>
         </div>
-        <div class="instructions">
-            <u><h3>Instructions</h3></u>
-            <ol>
-                <li>Press play to start game</li>
-                <li>Click on a card to flip it over</li>
-                <li>Click a second card, if they match you get 10 points</li>
-                <li>Try match all cards in under 45 seconds</li>
-                <li>Click reset to start over</li>
-            </ol>
-        </div>
-        <!--Game buttons-->
-        <div class="flex-row">
-            <button id="playBtn" class="btn hand-cursor">Play</button>
-            <button id="resetButton" class="btn hand-cursor">Reset</button>
-        </div>
-    </div>
     </main>
     <footer>
         <!--Social media links-->
@@ -121,19 +123,15 @@
                 aria-label="Visit GitHub page (opens in a new tab)"><i
                     class="fab fa-brands fa-github fa-social-icon"></i></a>
 
-            <a href= "https://www.linkedin.com/in/paul-hughes-2a6194242/" target="_blank" rel="noopener"
-                aria-label="linkedin (opens in a new tab)"><i 
-                    class="fab fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/paul-hughes-2a6194242/" target="_blank" rel="noopener"
+                aria-label="linkedin (opens in a new tab)"><i class="fab fa-brands fa-linkedin"></i></a>
 
-            <a href= https://slack.com rel="noopener" target="_blank" rel="noopener"
-                aria-label="slack (opens in a new tab)"><i
-                    class="fab fa-brands fa-slack"></i></a>
-
+            <a href=https://slack.com rel="noopener" target="_blank" rel="noopener"
+                aria-label="slack (opens in a new tab)"><i class="fab fa-brands fa-slack"></i></a>
         </div>
         <p class="foot-text">Please find links to my GitHub repository, my Linkedin page and find me on Slack
         </p>
     </footer>
-
     <script src="assets/JS/script.js"></script>
 </body>
 
