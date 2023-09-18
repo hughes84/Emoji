@@ -1,76 +1,78 @@
-/**for start game button on username dialog*/
+/*for start game button on username dialog*/
 const startButton = document.getElementById("start");
-/**for play game button on game page*/
+/*for play game button on game page*/
 const playButton = document.getElementById("playBtn")
-/**for reset button to return to username dialog*/
+/*for reset button to return to username dialog*/
 const resetButton = document.getElementById("resetButton");
-/**for username text content*/
+/*for username text content*/
 const dialog = document.getElementById("usernameDialog");
 const usernameElement = document.getElementById("username");
 const userNameForm = document.getElementById("form");
-/**for playing cards*/
+/*for playing cards*/
 const cards = document.querySelectorAll(".card");
-/**for score and timer*/
+/*for score and timer*/
 const scoreDiv = document.getElementById("score");
 const scoreTimerDiv = document.getElementById("score_timer");
 const timer = document.getElementById("timer")
-/**for game over screen*/
+/*for game over screen*/
 const gameOverScreen = document.getElementById("game-over-screen");
+/*for error*/
+const h5Element = document.createElement("h5");
 
 
-
-/**manage card flip */
+/*manage card flip*/
 let firstCard = null;
 let twoFlipped = false
-/**count score */
+/*count score*/
 let score = 0;
-/**time game*/
+/*time game*/
 let timerInterval;
 let elapsedTime
-/**username*/
+/*username*/
 let username
 
-/**game buttons*/
+/*game buttons*/
 playButton.addEventListener("click", startGame)
 startButton.addEventListener("click", closeDialog);
 resetButton.addEventListener('click', resetGame);
 
-/**username dialog function*/
+/*username dialog function*/
 function closeDialog() {
+  if (userNameForm.firstElementChild.tagName != "H5") {
+    h5Element.remove()
+  }
   if (usernameElement.value != "" && usernameElement.value.length < 10) {
     dialog.style.display = "none";
     username = usernameElement.value
 
-  } else if (userNameForm.firstElementChild.tagName != "H5") {
-    const h5Element = document.createElement("h5");
+  } else if (usernameElement.value === "") {
     h5Element.textContent = "Username Must Be Entered"
     h5Element.style.color = "red"
     userNameForm.insertBefore(h5Element, userNameForm.firstChild)
 
-  } else {
-    userNameForm.firstChild.style.backgroundColor = "white"
-    userNameForm.firstChild.style.color = "red"
-
+  } else if (usernameElement.value.length > 10) {
+    h5Element.textContent = "Username Must Be Less Than 10 Characters"
+    h5Element.style.color = "red"
+    userNameForm.insertBefore(h5Element, userNameForm.firstChild)
   }
-
-
 }
 
-/**game works functions*/
+/*game works functions*/
 function startGame() {
   shuffle()
   startTimer()
+  playButton.removeEventListener("click", startGame)
   cards.forEach(function (card) {
     card.addEventListener("click", cardFlip)
   });
 }
 
-/**bring user back to username dialog*/
+/*bring user back to username dialog*/
 function resetGame() {
   location.reload()
 }
 
-/**game play card flip*/
+/*game play card flip*/
 function cardFlip() {
   const cardFront = this.querySelector(".front");
   const cardBack = this.querySelector(".back");
@@ -81,11 +83,9 @@ function cardFlip() {
     }
     checkMatch(this, cardBack, cardFront)
   }
-
-
 }
 
-/**game play card matching */
+/*game play card matching */
 function checkMatch(card, cardBack, cardFront) {
   if (firstCard != null) {
     twoFlipped = true
@@ -99,10 +99,10 @@ function checkMatch(card, cardBack, cardFront) {
     } else {
       setTimeout(() => {
         cardFront.style.display = "none";
-        cardBack.style.display = "flex"; 
+        cardBack.style.display = "flex";
         firstCard.addEventListener("click", cardFlip);
         firstCard.children[0].style.display = "none";
-        firstCard.children[1].style.display = "flex"; 
+        firstCard.children[1].style.display = "flex";
         firstCard = null
         firstCardData = null
         twoFlipped = false
@@ -114,7 +114,7 @@ function checkMatch(card, cardBack, cardFront) {
   }
 }
 
-/**game play timer*/
+/*game play timer*/
 function startTimer() {
   elapsedTime = 45
   timerInterval = setInterval(() => {
@@ -125,11 +125,9 @@ function startTimer() {
       gameOver()
     }
   }, 1000);
-
-
 }
 
-/**game play shuffle cards*/
+/*game play shuffle cards*/
 function shuffle() {
   for (let card of cards) {
     let ramdomPos = Math.floor(Math.random() * 12);
@@ -137,7 +135,7 @@ function shuffle() {
   }
 }
 
-/**game play score counter*/
+/*game play score counter*/
 function addScore() {
   score += 10
   scoreDiv.innerHTML = `${username}'s Score: ${score}`
@@ -147,13 +145,12 @@ function addScore() {
   }
 }
 
-/**game over screen and message*/
+/*game over screen and message*/
 function gameOver() {
   cards.forEach(function (card) {
     card.removeEventListener("click", cardFlip)
   });
   dialog.style.display = "flex"
-
   userNameForm.style.display = "none"
   gameOverScreen.classList.remove("hide")
   gameOverScreen.classList.add("flex-column")
