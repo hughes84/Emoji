@@ -1,6 +1,12 @@
 # Emoji Memory Card Game
 
-![Emoji Memory Card Game Am I Responsive](assets/images/Emoji%20Responsive.png)
+![Emoji Memory Card Game Am I Responsive](assets/images/AmIresp.png)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/hughes84/emoji-memory-card-game?color=red)
+![GitHub contributors](https://img.shields.io/github/contributors/hughes84/emoji-memory-card-game?color=orange)
+![GitHub language count](https://img.shields.io/github/languages/count/hughes84/emoji-memory-card-game?color=yellow)
+![GitHub top language](https://img.shields.io/github/languages/top/hughes84/emoji-memory-card-game?color=green)
+![W3C Validation](https://img.shields.io/w3c-validation/html?color=blueviolet&targetUrl=https://hughes84.github.io/emoji-memory-card-game/)
 
 # Introduction
 Memory Card Game is a classic memory-testing game where players must match pairs of cards with identical images. This project implements a simple version of the game using HTML, CSS, and JavaScript.
@@ -126,13 +132,9 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 ![Cards](assets/images/Cards.png)
 ![Front](assets/images/Front.png)
 
-- A score counter and a timer to track progress.
+- Game area with instructions, score counter, timer and play and reset buttons.
 
-![Score and timer](assets/images/Scoretimer.png)
-
-- Play game button and option to reset the game.
-
-![Play game and reset buttons](assets/images/Playreset.png)
+![Score and timer](assets/images/Score.png)
 
 - A well done message when all pairs are successfully matched.
 
@@ -142,7 +144,7 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 ![Better luck next time](assets/images/Better%20luck.png)
 
-- GitHub, game rules and copyright links.
+- GitHub, Linkedn and Slack links.
 
 ![Links](assets/images/Links%20(2).png)
 
