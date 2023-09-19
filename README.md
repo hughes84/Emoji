@@ -74,7 +74,7 @@ Link to [live site](https://hughes84.github.io/emoji-memory-card-game/)
 
 # Project Structure
 
-![Project Structure](assets/images/Game%20structure.png)
+![Project Structure](assets/images/Structure.png)
 
 # Dependencies
 
@@ -116,7 +116,15 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 - Username dialog modal with start game button.
 
-![Username Dialog](assets/images/Start.png)
+![Username Dialog](assets/images/Start2.png)
+
+- Username error warning must be less than 10 characters.
+
+![Username Error Warning 10](assets/images/Start3.png)
+
+- Username error username must be entered.
+
+![Username must be entered](assets/images/Start4.png)
 
 - A grid of 12 facedown cards that players can click on to reveal Emoji images.
 
