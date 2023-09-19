@@ -255,32 +255,19 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 [Back to Table of Contents](#table-of-contents)
 
-# User Stories
+### Testing User Stories
 
-1. **As a user**, I want to be able to start a new game from the beginning.
-
-2. **As a user**, I want to see a timer clearly running while I play, so that I know when my time is running out.
-
-3. **As a user**, I want to see a my score clearly so that I can see my progress.
-
-4. **As a user**, I want the game to shuffle the cards differently everytime so the game is not repetitive.
-
-5. **As a user**, I want to be able to click any card so it flips over revealing its image clearly.
-
-6. **As a user**, I want to be able to flip two cards at a time trying to match them.
-
-7. **As a user**, I want the game to check if my choice of cards match and they stay turned up if they do.
-
-8. **As a user**, I want the game to turn the cards back over if they don't match.
-
-9. **As a user**, I want the game to finish when I've matched all pairs correctly and display a congratulations message.
-
-10. **As a user**, I want the option to reset the game whenever I choose so that I can start over.
-
-11. **As a user**, I want the game to be able to learn the rules quickly, start playing quickly and have clear card images and a good colour contrast throughout.
-
-
-13. **As a user on a smaller device**, I want to be able to play the game just as I would on a larger screen.
+| Expectation (As a user, I want to...)  | Result (As a user, I...)    |
+| :---------------------------------: | :------------------------------:|
+| be able to enter a username that then appears on the site | can enter a username at the start of the game and see it appears in the score area when I make a match |
+| be able to navigate my way around the game quickly and with ease | am able to navigate my way around the site quickly and with ease |
+| see some clear and precise instructions | can see some clear and precise instructions |
+| be able to find links about the games structure and author | am able to find links about the games structure and author |
+| see good contrasting colours that are visually appealing and relate to the theme | can see good contrasting colours that are visually appealing and relate to the theme |
+| be able to play the game with simple quick clicks | am able to play the game with simple quick clicks |
+| be able to watch the timer run down as I play | am able to watch the timer run down as I play |
+| be able to see my score change as I match pairs and my total score at end of game | am able to see my score change as I match pairs and my total score at end of game |
+| Be able to reset the game when I please | am able to reset the game by pressing the reset button |
 
 [Back to Table of Contents](#table-of-contents)
 
