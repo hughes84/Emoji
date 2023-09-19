@@ -164,12 +164,9 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 - HTML ([W3C validator](https://validator.w3.org/))
 
-![Error](assets/images/W3CH1.png)
+![Error](assets/images/W3cH.png)
 
 > Element link is missing one or more of the following attributes: rel.
-
-![Error](assets/images/W3CH2.png)
-
 > Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.
 > Error: Element h3 not allowed as child of element u in this context.
 > Error: Duplicate attribute rel.
@@ -184,6 +181,8 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 - JavaScript [JSHint](https://jshint.com/)
 
+![Errors](assets/images/JSHint.png)
+
 > Some semi-colons missing.
 
 [Back to Table of Contents](#table-of-contents)
@@ -192,7 +191,7 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 ## Developer Tools
 
-![Lighthouse rating]()
+![Lighthouse rating](assets/images/Lighthouse.png)
 
 # Browser Testing
 
@@ -213,40 +212,20 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 # Manual Testing
 
-### Launching game
-
-- Verify that the game starts without errors or issues.
-- Input username over 10 characters and press start game button - warning message appears.
-- Input username under 10 characters and press start game button - game page opens.
-
-### Game play
-
-- Press play button - timer starts countdown.
-- Press reset button - resets game.
-
-### Card Matching
-
-- Click on a card to flip it over.
-- Click on another card to flip it over.
-- Ensure that the game accurately identifies matching pairs.
-- Ensure that unmatched pairs are flipped back over.
-
-[Back to Table of Contents](#table-of-contents)
-
-### Win/lose Condition
-
-- Play the game until you have matched all pairs or until timer runs out.
-- Ensure that a congratulations message appears upon winning.
-- Ensure that a better luck next time message appears upon losing.
-
-### Links
-
-- Ensure links working appropriately and go to correct sites.
-
-### Responsiveness
-
-- Ensure responsiveness to all screen sizes from 1200px down to 320px.
-- Ensure the game remains playable and is visually appealing on various screen sizes.
+| Feature     | Expect      | Action        | Result |
+| :---------: | :----------:| :-----------: | :-----:|
+| **User name input**   | After entering  username, the name will appear beside the score when the user makes a match in the game  | Enter username and click "Start Game" button | Press play in game-area and click on card, click a second card. When a match is made username and user score appear |
+| **Username input where input value is null**   | When a username is not entered a warning message will appear to prompt user to enter one   | Enter no username and click "Start Game" button | Game will not start |
+| **Username input more than 10 characters**   | When a username of over 10 characters is entered a warning message will appear to prompt user of this   | Enter a username of over 10 characters and click "Start Game" button | Game will not start |
+| **Start Game Button**  | When correct values entered and start game button clicked, the username dialog will close and the user will be brought to the game area  | Clicked Start Game button | Username dialog closes, user is brought to game area |
+| **Footer links** | When clicked, links to the my Github repository, my Linkedn and slack open in a new tab |  Click on link | Relevant page opens in new tab |
+| **Card flip** | When card is clicked, card flips over and shows emoji image | Click card | Card flips and shows emoji image |
+| **Card match** | When a matching pair is made cards remain face up | Click cards until a matching pair of cards is found | Matching pair of cards remain face up |
+| **Card no-match** | If turned cards do not match, cards will flip back over after 1 second | Click on cards with no match | After 1 second, cards flip back over |
+| **Timer** | Timer will start running when play button clicked / finish running on game completion or when timer runs out | Click play / Complete game | Timer starts / Timer stops |
+| **Score display** | User gets 10 points for each match with a maximum of 60 from 6 matches | Play game | Score displays with each match and on completion |
+| **Game completion** | If all cards are matched congratulations message appears with user score/ If all cards are not matched | Complete game - finding all matching cards/ Complete game - not finding all matching cards | Congratulations message appears with user score/ Better luck next time message appears |
+| **Reset button** | When clicked, game and timer will reset and current score to will go back to 0  | Click reset button | Game resets with timer and score going back to 0 |
 
 ## User Interface
 
