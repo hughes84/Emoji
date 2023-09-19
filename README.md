@@ -214,7 +214,7 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 | **Card no-match** | If turned cards do not match, cards will flip back over after 1 second | Click on cards with no match | After 1 second, cards flip back over |
 | **Timer** | Timer will start running when play button clicked / finish running on game completion or when timer runs out | Click play / Complete game | Timer starts / Timer stops |
 | **Score display** | User gets 10 points for each match with a maximum of 60 from 6 matches | Play game | Score displays with each match and on completion |
-| **Game completion** | If all cards are matched congratulations message appears with user score/ If all cards are not matched | Complete game - finding all matching cards/ Complete game - not finding all matching cards | Congratulations message appears with user score/ Better luck next time message appears |
+| **Game completion** | If all cards are matched congratulations message appears with user score/ If all cards are not matched better luck next time message appears | Complete game - finding all matching cards/ Complete game - not finding all matching cards | Congratulations message appears with user score/ Better luck next time message appears |
 | **Reset button** | When clicked, game and timer will reset and current score to will go back to 0  | Click reset button | Game resets with timer and score going back to 0 |
 
 ## User Interface
