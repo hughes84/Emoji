@@ -14,7 +14,6 @@ Link to [live site](https://hughes84.github.io/emoji-memory-card-game/)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
-- [Acknowledgments](#acknowledgments)
 - [Author](#author)
 - [Design](#design)
     - [Wireframes](#wireframes)
@@ -51,7 +50,7 @@ Link to [live site](https://hughes84.github.io/emoji-memory-card-game/)
 - [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits](#credits)
-
+- [Acknowledgments](#acknowledgments)
 
 # How to Play
 
@@ -80,10 +79,6 @@ Link to [live site](https://hughes84.github.io/emoji-memory-card-game/)
 
 This project does not have any external dependencies. It can be played in any modern web browser.
 
-# Acknowledgments
-
-- This game was inspired by the classic and popular Memory Card Game.
-- Built as a fun project for learning HTML, CSS, and JavaScript.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -160,20 +155,6 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 - The goal of the site is to provide the user with a simple yet fun memory game with the added entertainment of the every day used emojis.
 - The game is quick at 45 seconds long which gives the user a thrill in trying to beat the clock.
 
-# User Stories
-
-## As a first time user I want to:
-
-- be able to enter my own name into the field that then displays on the game page.
-- be able to navigate my way around the site with ease.
-- have good contrasting colours on display.
-- have relevant links to information about the site.
-- have access to rules of the game.
-- be able to play the game quickly and easily.
-- be able to see the timer I'm up against.
-- be able to see my score.
-- be able to reset the game at the click of a button.
-- be able to find information on the site's author.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -328,8 +309,11 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 | **Bug** | **Fix** |
 | --- | --- |
-| Bug: Play button not working correctly. When pressed more than once it was interferring with timer, speeding up coutdown | Solution: |
-| Bug: | Solution: |
+| Bug: Play button not working correctly. When pressed more than once it was interferring with timer, speeding up coutdown | Solution: Removed eventlistner in startgame function|
+| Bug: Warning sign in username dialog showing multiple warning signs| Solution: Add if statement to check if warning is already showing and if it is remove it|
+| Bug: Cards truncating on smaller screens| Solution: Change grid in media query from four columns to three columns then to two|
+| Bug: User could keep flipping more than two cards causing game to malfunction| Solution: Added boolean and set timeout function to stop player being able to turn over more than two at a time|
+
 
 # Deployment
 
@@ -362,5 +346,10 @@ The following git commands were used during development to push code to the my r
 - Freepik for back of card image.
 - Wireframe Lucidchart for building wireframes. 
 - Visual Studio Code for being my Integrated development environment.
+
+# Acknowledgments
+
+- This game was inspired by the classic and popular Memory Card Game.
+- Built as a fun project for learning HTML, CSS, and JavaScript.
 
 [Back to Table of Contents](#table-of-contents)
