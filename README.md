@@ -10,6 +10,48 @@ Link to [live site](https://hughes84.github.io/emoji-memory-card-game/)
 
 # Table of Contents
 
+- [How to Play](#how-to-play)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Acknowledgments](#acknowledgments)
+- [Author](#author)
+- [Design](#design)
+    - [Wireframes](#wireframes)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+- [User Experience](#User-Experience)
+    - [Site Goals](#site-goals)
+- [User Stories](#user-stories)
+- [As a first time user I want to:](#as-a-first-time-user-i-want-to)
+- [Testing](#testing)
+    - [Validator Testing](#validator-testing)
+        - [HTML](#html)
+        - [CSS](#css)
+        - [JavaScript](#javascript)
+- [Accessibility](#accessibility)
+    - [Developer Tools](#developer-tools)
+- [Browser Testing](#browser-testing)
+    - [Testing Environment](#testing-environment)
+        - [Functionality](#functionality)
+- [Manual Testing](#manual-testing)
+    - [Launching game](#launching-game)
+    - [Game play](#game-play)
+    - [Card Matching](#card-matching)
+    - [Win/lose Condition](#win/lose-condition)
+    - [Links](#links)
+    - [Responsiveness](#responsiveness)
+- [User Interface](#user-interface)
+    - [Card Appearance](#card-appearance)
+    - [Game Instructions](#game-instructions)
+- [Error Handling](#error-handling)
+    - [Error Messages](#error-messages)
+    - [Console Errors](#console-errors)
+- [User Stories](#user-stories)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
 
 # How to Play
 
@@ -40,7 +82,7 @@ This project does not have any external dependencies. It can be played in any mo
 
 # Acknowledgments
 
-- This game wass inspired by the classic and popular Memory Card Game.
+- This game was inspired by the classic and popular Memory Card Game.
 - Built as a fun project for learning HTML, CSS, and JavaScript.
 
 [Back to Table of Contents](#table-of-contents)
@@ -112,7 +154,7 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 # User Stories
 
-## As a first time user I want to
+## As a first time user I want to:
 
 - be able to enter my own name into the field that then displays on the game page.
 - be able to navigate my way around the site with ease.
@@ -135,13 +177,13 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 ![Error](assets/images/W3CH1.png)
 
-- Element link is missing one or more of the following attributes: rel.
+> Element link is missing one or more of the following attributes: rel.
 
 ![Error](assets/images/W3CH2.png)
 
-- Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.
-- Error: Element h3 not allowed as child of element u in this context.
-- Error: Duplicate attribute rel.
+> Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.
+> Error: Element h3 not allowed as child of element u in this context.
+> Error: Duplicate attribute rel.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -149,11 +191,11 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 ![No errors](assets/images/W3CC.png)
 
-- There were no errors found in my CSS.
+> There were no errors found in my CSS.
 
 - JavaScript [JSHint](https://jshint.com/)
 
-- Some semi-colons missing.
+> Some semi-colons missing.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -182,18 +224,18 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 # Manual Testing
 
-<Launching game
+### Launching game
 
 - Verify that the game starts without errors or issues.
 - Input username over 10 characters and press start game button - warning message appears.
 - Input username under 10 characters and press start game button - game page opens.
 
-<Game play
+### Game play
 
 - Press play button - timer starts countdown.
 - Press reset button - resets game.
 
-<Card Matching
+### Card Matching
 
 - Click on a card to flip it over.
 - Click on another card to flip it over.
@@ -202,43 +244,43 @@ I invisaged my game to be easy to use and allow the user to get playing quickly.
 
 [Back to Table of Contents](#table-of-contents)
 
-<Win/lose Condition
+### Win/lose Condition
 
 - Play the game until you have matched all pairs or until timer runs out.
 - Ensure that a congratulations message appears upon winning.
 - Ensure that a better luck next time message appears upon losing.
 
-<Links
+### Links
 
 - Ensure links working appropriately and go to correct sites.
 
-<Responsiveness
+### Responsiveness
 
 - Ensure responsiveness to all screen sizes from 1200px down to 320px.
 - Ensure the game remains playable and is visually appealing on various screen sizes.
 
 ## User Interface
 
-<Card Appearance
+### Card Appearance
 
 - Ensure that all cards are displayed with appropriate images.
 - Ensure that the cards appearance is consistent and alluring.
 
 [Back to Table of Contents](#table-of-contents)
 
-<Game Instructions
+### Game Instructions
 
 - Review the game's instructions.
 - Ensure that the instructions are clear, correct and easy to understand.
 
 ## Error Handling
 
-<Error Messages
+### Error Messages
 
 - Purposely trigger errors by interacting with the game, for example click cards rapidly.
 - Ensure that error messages are displayed clearly and colourful to show the user what went wrong.
 
-<Console Errors
+### Console Errors
 
 - Check the browser's developer console for any errors.
 - Check for any errors in the console during game-play.
@@ -292,3 +334,25 @@ The following git commands were used during development to push code to the my r
 - git commit -m - To commit changes to the local repository.
 
 - git push - To push all committed code to my repository on github.
+
+[Back to Table of Contents](#table-of-contents)
+
+# Credits
+
+- Credit to W3 Schools for helping me resolve issues while coding throughout.
+- The Love Maths project from Code Institute was a useful guide at times.
+- Slack was also very helpful with peer assistance on occasion when stuck with a code.
+- GitHub for storing the projects code.
+- Color-hex.com for colors.
+- Google fonts for fonts.
+- Font Awesome for link symbols.
+- W3C Markup Validation for helping validate my HTML code.
+- W3C Jigsaw Validation for helping validate my CSS code.
+- JSHint Validation for helping validate my JavaScript code.
+- Am I responsive for helping check responsiveness of different sized screen sizes.
+- Etsy for front of card emoji images.
+- Freepik for back of card image.
+- Wireframe Lucidchart for building wireframes. 
+- Visual Studio Code for being my Integrated development environment.
+
+[Back to Table of Contents](#table-of-contents)
