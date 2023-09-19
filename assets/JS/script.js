@@ -1,41 +1,44 @@
-/*for start game button on username dialog*/
+//for start game button on username dialog
 const startButton = document.getElementById("start");
-/*for play game button on game page*/
+//for play game button on game page
 const playButton = document.getElementById("playBtn");
-/*for reset button to return to username dialog*/
+//for reset button to reload page
 const resetButton = document.getElementById("resetButton");
-/*for username text content*/
+//username dialog
 const dialog = document.getElementById("usernameDialog");
+//for username text content
 const usernameElement = document.getElementById("username");
 const userNameForm = document.getElementById("form");
-/*for playing cards*/
+//for playing cards
 const cards = document.querySelectorAll(".card");
-/*for score and timer*/
-const scoreDiv = document.getElementById("score");
+//for score and timer
+const scoreElement = document.getElementById("score");
 const timer = document.getElementById("timer");
-/*for game over screen*/
+//for game over screen
 const gameOverScreen = document.getElementById("game-over-screen");
-/*for error*/
+//for error in username dialog
 const h5Element = document.createElement("h5"); 
 
 
-/*manage card flip*/
+//manage card flip
 let firstCard = null;
 let twoFlipped = false;
-/*count score*/
+//count score
 let score = 0;
-/*time game*/
+//time game
 let timerInterval;
 let elapsedTime;
-/*username*/
+//username
 let username;
 
-/*game buttons*/
-playButton.addEventListener("click", startGame);
+//username dialog button
 startButton.addEventListener("click", closeDialog);
+//game buttons
+playButton.addEventListener("click", startGame);
 resetButton.addEventListener('click', resetGame);
 
-/*username dialog function*/
+/**function for checking if username is correct and notifying
+ *  user of errors or if no errors hiding username dialog*/
 function closeDialog() {
   if (userNameForm.firstElementChild.tagName != "H5") {
     h5Element.remove();
@@ -56,7 +59,7 @@ function closeDialog() {
   }
 }
 
-/*game works functions*/
+/**function that adds event listener to all cards and calls the shuffle function and start timer function*/
 function startGame() {
   shuffle();
   startTimer();
@@ -66,12 +69,12 @@ function startGame() {
   });
 }
 
-/*bring user back to username dialog*/
+/**function to reload page*/
 function resetGame() {
   location.reload();
 }
 
-/*game play card flip*/
+/**function to flip card that has been clicked*/
 function cardFlip() {
   const cardFront = this.querySelector(".front");
   const cardBack = this.querySelector(".back");
@@ -84,7 +87,7 @@ function cardFlip() {
   }
 }
 
-/*game play card matching */
+/**function to check if second card turned over matches the first one */
 function checkMatch(card, cardBack, cardFront) {
   if (firstCard != null) {
     twoFlipped = true;
@@ -108,12 +111,12 @@ function checkMatch(card, cardBack, cardFront) {
       }, 1000);
     }
   } else {
-    firstCard = card;
+    firstCard = card; //stores the first card click
     firstCard.removeEventListener("click", cardFlip);
   }
 }
 
-/*game play timer*/
+/**function to start the timer*/
 function startTimer() {
   elapsedTime = 45;
   timerInterval = setInterval(() => {
@@ -126,7 +129,7 @@ function startTimer() {
   }, 1000);
 }
 
-/*game play shuffle cards*/
+/**function to shuffle cards*/
 function shuffle() {
   for (let card of cards) {
     let ramdomPos = Math.floor(Math.random() * 12);
@@ -134,17 +137,17 @@ function shuffle() {
   }
 }
 
-/*game play score counter*/
+/**game play score counter*/
 function addScore() {
   score += 10;
-  scoreDiv.innerHTML = `${username}'s Score: ${score}`;
+  scoreElement.innerHTML = `${username}'s Score: ${score}`;
   if (score === 60) {
     clearInterval(timerInterval);
     gameOver();
   }
 }
 
-/*game over screen and message*/
+/**game over dialog and message*/
 function gameOver() {
   cards.forEach(function (card) {
     card.removeEventListener("click", cardFlip);
